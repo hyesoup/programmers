@@ -1,0 +1,18 @@
+## 풀이 1. 시간초과
+
+def solution(N, stages):
+    dictionary={}
+    
+    for i in range(1,N+1):
+        if i in stages:
+            dictionary[i] = stages.count(i)/len(stages)
+            while i in stages:
+                stages.remove(i)
+        else:
+            dictionary[i] = 0
+    dictionary2 = sorted(dictionary.items(), key=lambda x : (-x[1], x[0]))
+    
+    dictionary3=[]
+    for d in dictionary2:
+        dictionary3.append(d[0])
+    return dictionary3
