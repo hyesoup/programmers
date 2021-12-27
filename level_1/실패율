@@ -29,3 +29,17 @@ def solution(N, stages):
     for e in exam:
         answer.append(e[0])
     return answer
+
+## 풀이 3. 통과
+def solution(N, stages):
+    dictionary={}
+    length = len(stages)
+    for i in range(1, N+1):
+        if length != 0:
+            count = stages.count(i)
+            dictionary[i] = count/length
+            length -= count
+        else:
+            dictionary[i] = 0
+    dictionary = sorted(dictionary, key=lambda x: -dictionary[x])
+    return dictionary
