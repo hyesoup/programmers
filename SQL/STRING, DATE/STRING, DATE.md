@@ -1,0 +1,1 @@
+STRING, DATE 문제
