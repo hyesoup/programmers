@@ -1,0 +1,1 @@
+SUM, MAX, MIN 문제
